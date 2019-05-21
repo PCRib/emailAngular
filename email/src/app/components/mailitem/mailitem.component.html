@@ -1,0 +1,34 @@
+<div class="outerBox">
+  <div [ngClass]="setClasses(mail)" class="mailList">
+    <div class="mailList-spacing__left">
+      <img
+        class="userIcon"
+        src="../../../assets/images/ninjaP.png"
+        alt="Profile"
+      />
+      <div class="mailList-details">
+        <p class="mailList-name">{{ mail.sender }}</p>
+        <p class="mailList-message">{{ shortenMsg(mail.message) }}</p>
+        <div class="calendar">
+          <img
+            class="calendarIcon"
+            src="../../../assets/images/calendar.png"
+            alt=""
+          />
+          <p class="mailList-date">{{ formatDate() }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="mailList-spacing__right">
+      <p (click)="openOptions(mail)">...</p>
+    </div>
+  </div>
+  <div class="underOptions">
+    <div class="download">
+      <img src="../../../assets/images/cloud-download.png" alt="" />
+    </div>
+    <div class="del" (click)="deletedMail(mail)">
+      <img src="../../../assets/images/delete.png" alt="" />
+    </div>
+  </div>
+</div>

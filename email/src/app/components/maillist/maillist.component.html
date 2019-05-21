@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="mailBox">
+    <div class="mailBox-header">
+      <div class="mailBox-header_left-text">
+        <div>
+          <div class="mailBox-header_left-text-font">
+            List Name
+            <div class="notification">{{ newEmails() }}</div>
+          </div>
+          <p class="mailBox-header__length">Total {{ maillist.length }}</p>
+        </div>
+      </div>
+      <div class="addBtn">
+        <p>+</p>
+      </div>
+    </div>
+    <app-mailitem
+      (deleteMail)="deleteMail($event)"
+      *ngFor="let mail of maillist"
+      [mail]="mail"
+    >
+    </app-mailitem>
+  </div>
+</div>

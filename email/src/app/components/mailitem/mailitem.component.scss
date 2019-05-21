@@ -1,0 +1,110 @@
+@media (max-width: 550px) {
+  .mailList-spacing__left {
+    .userIcon {
+      display: none;
+    }
+  }
+}
+
+.mailList {
+  padding: 0.5rem 2rem;
+  height: 7.75rem;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-bottom: 1px solid #eeeeee;
+  box-shadow: 0px 1px 5px #00000038;
+  .mailList-spacing__left {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+  }
+  .mailList-spacing__right {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .userIcon {
+    height: 4rem;
+    background: aqua;
+    border-radius: 2rem;
+    margin: 0 2rem 0 0;
+  }
+  .calendar {
+    display: flex;
+    .calendarIcon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .mailList-details {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    .mailList-name {
+      font-weight: 500;
+      color: #4a4a4a;
+    }
+    .mailList-message {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #9c9c9c;
+      text-align: left;
+    }
+    .mailList-date {
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: #8b8b8b;
+    }
+  }
+}
+
+.underOptions {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  .del {
+    height: 100%;
+    width: 5rem;
+    color: white;
+    background: #d80000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .download {
+    height: 100%;
+    width: 5rem;
+    color: white;
+    background: #00cf2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 1.75rem;
+  }
+}
+
+.outerBox {
+  position: relative;
+  height: 7.75rem;
+}
+
+.newItem {
+  border-left: 5px solid #0070b6;
+}
+.isClicked {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-160px);
+}
